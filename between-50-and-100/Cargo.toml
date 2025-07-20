@@ -1,0 +1,6 @@
+[package]
+name = "between-50-and-100"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
