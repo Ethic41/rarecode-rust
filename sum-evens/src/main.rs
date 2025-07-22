@@ -16,9 +16,9 @@ fn main() {
 pub fn sum_evens(start: u32, end: u32) -> u32 {
     let mut sum: u32 = 0;
 
-    for _i in start..end {
-        if _i % 2 == 0 {
-            sum += _i
+    for i in start..end {
+        if i % 2 == 0 {
+            sum += i
         }
     }
 
