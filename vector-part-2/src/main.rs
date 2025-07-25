@@ -27,3 +27,13 @@ pub fn simple_count(n: u32) -> Vec<u32> {
 
     container
 }
+
+pub fn countdown(n: u32) -> Vec<u32> {
+    let mut container: Vec<u32> = vec![];
+
+    for i in 0..n{
+        container.push(n - i);
+    }
+
+    container
+}
