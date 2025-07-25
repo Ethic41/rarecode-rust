@@ -59,3 +59,10 @@ pub fn make_copy(v: Vec<i32>) -> Vec<i32> {
     
     container
 }
+
+pub fn modify_with_clone(v: Vec<i32>) -> Vec<i32> {
+    let mut my_vec: Vec<i32> = v.clone();
+
+    my_vec.push(6);
+    my_vec
+}
