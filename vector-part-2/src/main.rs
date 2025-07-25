@@ -37,3 +37,16 @@ pub fn countdown(n: u32) -> Vec<u32> {
 
     container
 }
+
+pub fn modify(v: Vec<i32>) -> Vec<i32> {
+    let mut my_vec: Vec<i32> = vec![];
+
+    for i in 0..v.len(){
+        my_vec.push(v[i]);
+    }
+
+    my_vec.push(99);
+    
+    my_vec
+
+}
