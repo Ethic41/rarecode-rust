@@ -17,3 +17,13 @@ pub fn vector_append() {
 
     println!("{:?}", v);
 }
+
+pub fn simple_count(n: u32) -> Vec<u32> {
+    let mut container: Vec<u32> = vec![];
+
+    for i in 0..n{
+        container.push(i+1);
+    }
+
+    container
+}
