@@ -49,3 +49,13 @@ pub fn modify(v: Vec<i32>) -> Vec<i32> {
 
     my_vec
 }
+
+pub fn make_copy(v: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len() {
+        container.push(v[i]);
+    }
+    
+    container
+}
