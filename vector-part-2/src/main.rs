@@ -13,7 +13,7 @@ pub fn vector_modified() {
 pub fn vector_append() {
     let mut v: Vec<i32> = vec![4, 5, 6];
 
-    v.push(5);
+    v.push(99);
 
     println!("{:?}", v);
 }
