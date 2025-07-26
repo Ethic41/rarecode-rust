@@ -64,5 +64,16 @@ pub fn modify_with_clone(v: Vec<i32>) -> Vec<i32> {
     let mut my_vec: Vec<i32> = v.clone();
 
     my_vec.push(6);
+    
     my_vec
+}
+
+pub fn add_1_to_each(v: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len() {
+        container.push(v[i] + 1);
+    }
+
+    container
 }
