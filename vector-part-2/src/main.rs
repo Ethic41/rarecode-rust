@@ -77,3 +77,28 @@ pub fn add_1_to_each(v: Vec<i32>) -> Vec<i32> {
 
     container
 }
+
+pub fn append_sum(v: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = v.clone();
+    let mut sum: i32 = 0;
+
+    for i in 0..v.len() {
+        sum += v[i];
+    }
+
+    container.push(sum);
+
+    container
+}
+
+pub fn remove_odd(v: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len() {
+        if v[i] % 2 == 0 {
+            container.push(v[i]);
+        }
+    }
+
+    container
+}
