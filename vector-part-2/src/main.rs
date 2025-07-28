@@ -150,3 +150,34 @@ pub fn double_at_idx(v: Vec<i32>, idx: usize) -> Vec<i32> {
 
     container
 }
+
+pub fn swap_ij(v: Vec<i32>, i: usize, j: usize) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    let len_v: usize = v.len();
+
+    if i >= len_v || j >= len_v {
+        return v.clone();
+    }
+
+    let i_item: i32 = v[i];
+    let j_item: i32 = v[j];
+
+    for index in 0..len_v{
+        if index == i {
+            container.push(j_item);
+            continue;
+        }
+
+        if index == j {
+            container.push(i_item);
+            continue
+        }
+
+        container.push(v[index]);
+    }
+
+    container
+}
+
+
