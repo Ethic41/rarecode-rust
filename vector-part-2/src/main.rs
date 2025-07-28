@@ -135,3 +135,18 @@ pub fn reverse(v: Vec<i32>) -> Vec<i32> {
 
     container
 }
+
+pub fn double_at_idx(v: Vec<i32>, idx: usize) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len(){
+        if i == idx {
+            container.push(v[i] * 2);
+            continue;
+        }
+
+        container.push(v[i]);
+    }
+
+    container
+}
