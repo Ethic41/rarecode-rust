@@ -102,3 +102,36 @@ pub fn remove_odd(v: Vec<i32>) -> Vec<i32> {
 
     container
 }
+
+pub fn remove_less_than_k(v: Vec<i32>, k: i32) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len() {
+        if v[i] >= k {
+            container.push(v[i]);
+        }
+    }
+
+    container
+}
+
+pub fn elementwise_add(v1: Vec<i32>, v2: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v1.len(){
+        container.push(v1[i] + v2[i]);
+    }
+
+    container
+}
+
+pub fn reverse(v: Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+    let v_len: usize = v.len();
+
+    for i in 0..v_len {
+        container.push(v[v_len - 1 - i]);
+    }
+
+    container
+}
