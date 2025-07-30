@@ -75,3 +75,49 @@ pub fn append_sum(v: &Vec<i32>) -> Vec<i32> {
     container.push(sum);
     container
 }
+
+pub fn elementwise_sum(v1: &Vec<i32>, v2: &Vec<i32>) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+    let v_len: usize = v1.len();
+
+    for i in 0..v_len{
+        container.push(v1[i] + v2[i]);
+    }
+
+    container
+}
+
+pub fn all_elements_less_than_k(v: &Vec<i32>, k: i32) -> bool {
+    for i in 0..v.len(){
+        if v[i] >= k {
+            return false;
+        }
+    }
+
+    true
+}
+
+pub fn sum_greater_than_s(v: &Vec<i32>, s: i32) -> bool{
+    let mut sum: i32 = 0;
+
+    for i in 0..v.len(){
+        sum += v[i];
+        if sum > s {
+            return true;
+        }
+    }
+
+    false
+}
+
+pub fn filter_lt_k(v: &Vec<i32>, k: i32) -> Vec<i32> {
+    let mut container: Vec<i32> = vec![];
+
+    for i in 0..v.len(){
+        if v[i] >= k{
+            container.push(v[i]);
+        }
+    }
+
+    container
+}
