@@ -39,3 +39,29 @@ pub fn find(v: &Vec<i32>, k: i32) -> i32 {
 	}
 	-1
 }
+
+pub fn can_downcast(x: u32) -> bool {
+    if x <= u8::MAX as u32 {
+        true
+    }
+    else {
+        false
+    }
+}
+
+pub fn can_downcast_1(x: i32) -> bool {
+    if x <= i8::MAX as i32 && x >= i8::MIN as i32 {
+        true
+    }
+    else {
+        false
+    }
+}
+
+pub fn max_of_three(x: i32, y: i32, z: i32) -> i32 {
+    let mut max: i32 =  if x > y { x } else { y };
+
+    max = if z > max { z } else { max };
+
+    max
+}
