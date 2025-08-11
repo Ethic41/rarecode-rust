@@ -75,3 +75,15 @@ pub fn vector_can_be_downcasted(v: &Vec<i32>) -> bool {
     
     true
 }
+
+pub fn clamp(x: i32) -> i8 {
+    if x > i8::MAX as i32 {
+        return i8::MAX;
+    }
+
+    if x < i8::MIN as i32 {
+        return i8::MIN;
+    }
+
+    x as i8
+}
