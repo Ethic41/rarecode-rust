@@ -65,3 +65,13 @@ pub fn max_of_three(x: i32, y: i32, z: i32) -> i32 {
 
     max
 }
+
+pub fn vector_can_be_downcasted(v: &Vec<i32>) -> bool {
+    for i in 0..v.len(){
+        if v[i] > i8::MAX as i32 || v[i] < i8::MIN as i32 {
+            return false;
+        }
+    }
+    
+    true
+}
