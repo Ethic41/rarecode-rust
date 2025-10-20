@@ -33,3 +33,19 @@ pub fn largest_set(v: &Vec<HashSet<i32>>) -> usize {
     
     largest
 }
+
+pub fn mul_table(n: u32) -> Vec<Vec<u32>> {
+    let mut mul_table: Vec<Vec<u32>> = vec![];
+
+    for i in 1..n+1 {
+        let mut cur_table: Vec<u32> = vec![];
+        
+        for j in 1..n+1 {
+            cur_table.push(i * j);
+        }
+
+        mul_table.push(cur_table);
+    }
+
+    mul_table
+}
