@@ -49,3 +49,15 @@ pub fn mul_table(n: u32) -> Vec<Vec<u32>> {
 
     mul_table
 }
+
+pub fn remove_smaller_than_k(v: &Vec<HashSet<i32>>, k: usize) -> Vec<HashSet<i32>> {
+    let mut my_v: Vec<HashSet<i32>> = vec![];
+
+    for i in 0..v.len() {
+        if v[i].len() >= k {
+            my_v.push(v[i].clone());
+        }
+    }
+
+    my_v
+}
