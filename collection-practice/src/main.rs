@@ -6,6 +6,9 @@ fn main() {
     s1.insert(2);
     s1.insert(3);
 
+    let s2: HashSet<i32> = HashSet::from([1,2,3]);
+    s1.extend(s2);
+
     let len: usize = size_of_set(&s1);
     println!("{}", len);
 }
