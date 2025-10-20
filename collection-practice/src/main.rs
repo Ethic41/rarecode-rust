@@ -61,3 +61,13 @@ pub fn remove_smaller_than_k(v: &Vec<HashSet<i32>>, k: usize) -> Vec<HashSet<i32
 
     my_v
 }
+
+pub fn merge_all(v: &Vec<HashSet<i32>>) -> HashSet<i32> {
+    let mut my_set: HashSet<i32> = HashSet::new();
+
+    for i in 0..v.len() {
+        my_set.extend(v[i].clone());
+    }
+
+    my_set
+}
