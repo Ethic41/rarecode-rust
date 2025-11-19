@@ -113,3 +113,15 @@ pub fn is_disjoint(v1: &Vec<i32>, v2: &Vec<i32>) -> bool {
 
     true
 }
+
+pub fn safe_cast_vec_to_set(v: &Vec<i64>) -> HashSet<i32> {
+    let mut set: HashSet<i32> = HashSet::new();
+
+    for i in 0..v.len() {
+        if v[i] <= i32::MAX as i64 && v[i] >= i32::MIN as i64 {
+            set.insert(v[i] as i32);
+        }
+    }
+
+    set
+}
